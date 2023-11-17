@@ -270,6 +270,18 @@
 					"response": []
 				},
 				{
+					"name": "REST - Field Description per Object",
+					"id": "b624f3a0-94c5-4c00-ac06-2dac8feea049",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
 					"name": "Record Count Copy",
 					"id": "3334f02c-0cb8-4851-b2c3-4df42f6f91af",
 					"protocolProfileBehavior": {
