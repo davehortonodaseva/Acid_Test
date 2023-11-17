@@ -36,9 +36,19 @@
 			"id": "180f9e01-1a09-4438-9f64-fa00d1c8b142"
 		},
 		{
-			"name": "New Folder",
+			"name": "3. Corrupt your Org",
 			"item": [],
 			"id": "c9a733f5-36ef-4a49-a4a5-1ff30f0bdb3d"
+		},
+		{
+			"name": "4. Re-Count",
+			"item": [],
+			"id": "5a3e3ac3-d796-48b7-8976-4fd8aef18735"
+		},
+		{
+			"name": "5. Compare",
+			"item": [],
+			"id": "9b8ce10e-2f45-4bda-8350-4b12f1b4a55e"
 		},
 		{
 			"name": "SOAP - Login",
