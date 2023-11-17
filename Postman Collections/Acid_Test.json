@@ -9,7 +9,7 @@
 			"name": "1. Count",
 			"item": [
 				{
-					"name": "Record Count Copy",
+					"name": "Record Count",
 					"id": "73c22880-56de-4e5d-bf59-591ab017a23d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
