@@ -267,7 +267,92 @@
 						"method": "GET",
 						"header": []
 					},
-					"response": []
+					"response": [
+						{
+							"id": "0e64244b-9a11-4b20-b24c-41cdc14c1981",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://oda-dave-2--mirror.sandbox.my.salesforce.com/services/data/v59.0/limits/recordCount?sObjects=AcceptedEventRelation,AccountContactRole,AccountContactRoleChangeEvent,ActivityHistory,Asset,AssetChangeEvent,AttachedContentDocument,AttachedContentNote,Attachment,AuthorizationFormConsent,AuthorizationFormConsentChangeEvent,CampaignMember,CampaignMember,CampaignMemberChangeEvent,Case,CaseChangeEvent,CaseContactRole,CaseTeamMember,CaseTeamTemplateMember,CollaborationGroupRecord,CombinedAttachment,CommSubscriptionConsent,CommSubscriptionConsentChangeEvent,Contact,ContactChangeEvent,ContactFeed,ContactHistory,ContactRequest,ContactShare,ContentDistribution,ContentDocumentLink,ContentDocumentLinkChangeEvent,ContentVersion,ContentVersionChangeEvent,Contract,ContractChangeEvent,ContractContactRole,DeclinedEventRelation,DuplicateRecordItem,EmailMessageRelation,EmailStatus,EntitlementContact,EntitySubscription,Event,EventChangeEvent,EventRelation,EventRelationChangeEvent,FeedComment,FeedItem,FlowExecutionErrorEvent,FlowOrchestrationWorkItem,FlowRecordRelation,Lead,LeadChangeEvent,ListEmailIndividualRecipient,MatchingInformation,Note,NoteAndAttachment,OpenActivity,Opportunity,OpportunityChangeEvent,OpportunityContactRole,OpportunityContactRoleChangeEvent,Order,OrderChangeEvent,ProcessInstance,ProcessInstanceChangeEvent,ProcessInstanceHistory,RecordAction,RecordActionHistory,ServiceContract,ServiceContractChangeEvent,SocialPersona,SocialPost,SocialPostChangeEvent,Subscription__c,Task,TaskChangeEvent,TopicAssignment,UndecidedEventRelation,User,UserChangeEvent,UserEmailPreferredPerson,WorkOrder,WorkOrderChangeEvent",
+									"protocol": "https",
+									"host": [
+										"oda-dave-2--mirror",
+										"sandbox",
+										"my",
+										"salesforce",
+										"com"
+									],
+									"path": [
+										"services",
+										"data",
+										"v59.0",
+										"limits",
+										"recordCount"
+									],
+									"query": [
+										{
+											"key": "sObjects",
+											"value": "AcceptedEventRelation,AccountContactRole,AccountContactRoleChangeEvent,ActivityHistory,Asset,AssetChangeEvent,AttachedContentDocument,AttachedContentNote,Attachment,AuthorizationFormConsent,AuthorizationFormConsentChangeEvent,CampaignMember,CampaignMember,CampaignMemberChangeEvent,Case,CaseChangeEvent,CaseContactRole,CaseTeamMember,CaseTeamTemplateMember,CollaborationGroupRecord,CombinedAttachment,CommSubscriptionConsent,CommSubscriptionConsentChangeEvent,Contact,ContactChangeEvent,ContactFeed,ContactHistory,ContactRequest,ContactShare,ContentDistribution,ContentDocumentLink,ContentDocumentLinkChangeEvent,ContentVersion,ContentVersionChangeEvent,Contract,ContractChangeEvent,ContractContactRole,DeclinedEventRelation,DuplicateRecordItem,EmailMessageRelation,EmailStatus,EntitlementContact,EntitySubscription,Event,EventChangeEvent,EventRelation,EventRelationChangeEvent,FeedComment,FeedItem,FlowExecutionErrorEvent,FlowOrchestrationWorkItem,FlowRecordRelation,Lead,LeadChangeEvent,ListEmailIndividualRecipient,MatchingInformation,Note,NoteAndAttachment,OpenActivity,Opportunity,OpportunityChangeEvent,OpportunityContactRole,OpportunityContactRoleChangeEvent,Order,OrderChangeEvent,ProcessInstance,ProcessInstanceChangeEvent,ProcessInstanceHistory,RecordAction,RecordActionHistory,ServiceContract,ServiceContractChangeEvent,SocialPersona,SocialPost,SocialPostChangeEvent,Subscription__c,Task,TaskChangeEvent,TopicAssignment,UndecidedEventRelation,User,UserChangeEvent,UserEmailPreferredPerson,WorkOrder,WorkOrderChangeEvent"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 17:42:03 GMT"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache,must-revalidate,max-age=0,no-store,private"
+								},
+								{
+									"key": "Sforce-Limit-Info",
+									"value": "api-usage=944/101000"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"sObjects\": [\n        {\n            \"count\": 2661,\n            \"name\": \"Case\"\n        },\n        {\n            \"count\": 736,\n            \"name\": \"Contact\"\n        },\n        {\n            \"count\": 2700,\n            \"name\": \"ContactFeed\"\n        },\n        {\n            \"count\": 2,\n            \"name\": \"ContentVersion\"\n        },\n        {\n            \"count\": 2,\n            \"name\": \"Contract\"\n        },\n        {\n            \"count\": 1,\n            \"name\": \"Event\"\n        },\n        {\n            \"count\": 2700,\n            \"name\": \"FeedItem\"\n        },\n        {\n            \"count\": 9,\n            \"name\": \"Lead\"\n        },\n        {\n            \"count\": 213,\n            \"name\": \"Opportunity\"\n        },\n        {\n            \"count\": 0,\n            \"name\": \"Subscription__c\"\n        },\n        {\n            \"count\": 8,\n            \"name\": \"Task\"\n        },\n        {\n            \"count\": 7,\n            \"name\": \"User\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "REST - Field Description per Object",
