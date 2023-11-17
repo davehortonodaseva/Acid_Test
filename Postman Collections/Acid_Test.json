@@ -165,5 +165,11 @@
 			},
 			"response": []
 		}
+	],
+	"variable": [
+		{
+			"key": "SOAPKEY",
+			"value": "SOAPKEY"
+		}
 	]
 }
