@@ -190,7 +190,75 @@
 			"name": "5. Re-Count",
 			"item": [
 				{
-					"name": "Record Count",
+					"name": "SOAP - Get Session",
+					"id": "fa67249e-5d83-4368-97c3-d616c9cdccdc",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "SOAPAction",
+								"value": "''",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<env:Envelope xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:env=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <env:Body>\n    <n1:login xmlns:n1=\"urn:partner.soap.sforce.com\">\n      <n1:username>dave.horton+oda-dave-2@odaseva.com.mirror</n1:username>\n      <n1:password>Y7qkKGY7qkKGY7qkKG8qsFHDUevakj50Unw2NPsaHR</n1:password>\n    </n1:login>\n  </env:Body>\n</env:Envelope>\n\n"
+						},
+						"url": "https://test.salesforce.com/services/Soap/u/59.0"
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP - List Objects",
+					"id": "632bed95-5ecf-4b9d-963d-7a6e1175a3cd",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "SOAPAction",
+								"value": "''",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soapenv:Envelope\n    xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:urn=\"urn:partner.soap.sforce.com\">\n    <soapenv:Header>\n        <urn:SessionHeader>\n            <urn:sessionId>00D250000009OWb!AQgAQIM.Ny03YhDRCG8GEpYVAIj.mQGd2yfMdYrajJZDRr113JkcmCOhgUElGEV5p8IxUCsE5O0QG3X1rdiV5vK_1yRPaZCu</urn:sessionId>\n        </urn:SessionHeader>\n    </soapenv:Header>\n    <soapenv:Body>\n        <urn:describeSObjects>\n            <urn:sObjectType>account</urn:sObjectType>\n        </urn:describeSObjects>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
+						},
+						"url": "https://oda-dave-2--mirror.sandbox.my.salesforce.com/services/Soap/u/59.0"
+					},
+					"response": []
+				},
+				{
+					"name": "REST - Record Count per Object",
 					"id": "69951660-e948-412b-a378-e8d81b3f8b9d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -278,74 +346,6 @@
 							"raw": "<soapenv:Envelope\n    xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:urn=\"urn:partner.soap.sforce.com\">\n    <soapenv:Header>\n        <urn:SessionHeader>\n            <urn:sessionId>00D250000009OWb!AQgAQIM.Ny03YhDRCG8GEpYVAIj.mQGd2yfMdYrajJZDRr113JkcmCOhgUElGEV5p8IxUCsE5O0QG3X1rdiV5vK_1yRPaZCu</urn:sessionId>\n        </urn:SessionHeader>\n    </soapenv:Header>\n    <soapenv:Body>\n        <urn:query>\n            <urn:queryString>SELECT COUNT() FROM Account</urn:queryString>\n        </urn:query>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
 						},
 						"url": "https://oda-dave-2--mirror.sandbox.my.salesforce.com/services/Soap/u/59.0"
-					},
-					"response": []
-				},
-				{
-					"name": "SOAP - Object Fields",
-					"id": "632bed95-5ecf-4b9d-963d-7a6e1175a3cd",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"content-type": true
-						},
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "SOAPAction",
-								"value": "''",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "text/xml",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<soapenv:Envelope\n    xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:urn=\"urn:partner.soap.sforce.com\">\n    <soapenv:Header>\n        <urn:SessionHeader>\n            <urn:sessionId>00D250000009OWb!AQgAQIM.Ny03YhDRCG8GEpYVAIj.mQGd2yfMdYrajJZDRr113JkcmCOhgUElGEV5p8IxUCsE5O0QG3X1rdiV5vK_1yRPaZCu</urn:sessionId>\n        </urn:SessionHeader>\n    </soapenv:Header>\n    <soapenv:Body>\n        <urn:describeSObjects>\n            <urn:sObjectType>account</urn:sObjectType>\n        </urn:describeSObjects>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
-						},
-						"url": "https://oda-dave-2--mirror.sandbox.my.salesforce.com/services/Soap/u/59.0"
-					},
-					"response": []
-				},
-				{
-					"name": "SOAP - Login",
-					"id": "fa67249e-5d83-4368-97c3-d616c9cdccdc",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"content-type": true
-						},
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "SOAPAction",
-								"value": "''",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "text/xml",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<env:Envelope xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:env=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <env:Body>\n    <n1:login xmlns:n1=\"urn:partner.soap.sforce.com\">\n      <n1:username>dave.horton+oda-dave-2@odaseva.com.mirror</n1:username>\n      <n1:password>Y7qkKGY7qkKGY7qkKG8qsFHDUevakj50Unw2NPsaHR</n1:password>\n    </n1:login>\n  </env:Body>\n</env:Envelope>\n\n"
-						},
-						"url": "https://test.salesforce.com/services/Soap/u/59.0"
 					},
 					"response": []
 				}
